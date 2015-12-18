@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!-- Inicio Atendimento-->
+		  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+		    <script type="text/javascript">
+		      google.load("visualization", "1", {packages:["corechart"]});
+		      google.setOnLoadCallback(drawChart);
+		      function drawChart() {
+		        var data = google.visualization.arrayToDataTable([
+		        ['', 'Em Aberto', 'Não Atendido', 'Atendido' ],
+			['', 1,   3,     5     ]
+		         
+		        ]);
+		
+		        var options = {
+		          title: ' Ligação do Funcionário Andre no periodo ',
+         		 hAxis: {title: 'Registro de Ligações', titleTextStyle: {color: 'red'}}
+		        };
+		
+		        var chart = new google.visualization.ColumnChart(document.getElementById('tabela1'));
+		        chart.draw(data, options);
+		      }
+		    </script>
+		    
+		    
+		    
+		    <div id="tabela1" style="width: 990px; height: 400px;"></div>
+</body>
+</html>
